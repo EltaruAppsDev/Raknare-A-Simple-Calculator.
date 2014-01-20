@@ -9,7 +9,6 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
 @end
 
 @implementation ViewController
@@ -83,14 +82,14 @@
 - (IBAction)swipeLeft:(UISwipeGestureRecognizer *)sender {
     operation = divide;
     storage = _Screen.text;
-    _operatorDisplay.text = @"x";
+    _operatorDisplay.text = @"/";
     _Screen.text=@"";
 }
 
 - (IBAction)swipeRight:(UISwipeGestureRecognizer *)sender {
     operation = multiply;
     storage = _Screen.text;
-    _operatorDisplay.text = @"/";
+    _operatorDisplay.text = @"*";
     _Screen.text=@"";
 }
 
@@ -105,21 +104,28 @@
     switch(operation) {
         case add:
             _Screen.text= [NSString stringWithFormat:@"%qi",[val longLongValue]+[storage longLongValue]];
+            [self setValuesforMemoryLabels];
             break;
         case subtract:
             _Screen.text= [NSString stringWithFormat:@"%qi",[storage longLongValue]-[val longLongValue]];
+            [self setValuesforMemoryLabels];
             break;
         case divide:
             _Screen.text= [NSString stringWithFormat:@"%qi",[storage longLongValue]/[val longLongValue]];
+            [self setValuesforMemoryLabels];
             break;
         case multiply:
             _Screen.text= [NSString stringWithFormat:@"%qi",[val longLongValue]*[storage longLongValue]];
+            [self setValuesforMemoryLabels];
             break;
     }
+    
+}
+-(void)setValuesforMemoryLabels {
+    NSString *val = _Screen.text;
     interm = _storageOne.text;
     _storageOne.text = val;
     _storageTwo.text = interm;
-    
 }
 
 @end
