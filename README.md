@@ -13,3 +13,5 @@ You can clear your text by pressing and holding on the screen. You can calculate
 ![Divide](https://github.com/eltaruappsdev/Raknare-A-Simple-Calculator./blob/master/divide.png?raw=true "Divide")
 ![Clear](https://github.com/eltaruappsdev/Raknare-A-Simple-Calculator./blob/master/clear.png?raw=true "Clear")
 ![Calculate](https://github.com/eltaruappsdev/Raknare-A-Simple-Calculator./blob/master/calculate.png?raw=true "Calculate")
+
+The nice gesture icons are from MobileTuxedo.com. 
